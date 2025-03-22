@@ -24,7 +24,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/textInputUsername"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
@@ -37,6 +36,7 @@
         <!-- Menampilkan teks di dalam input -->
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -46,7 +46,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/textInputPassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
@@ -59,6 +58,7 @@
         app:endIconTint="@color/red">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -67,7 +67,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/textInputRePassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
@@ -80,6 +79,7 @@
         app:endIconTint="@color/red">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputRePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

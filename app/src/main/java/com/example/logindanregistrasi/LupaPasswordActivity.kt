@@ -6,6 +6,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.logindanregistrasi.databinding.ActivityLupaPasswordBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LupaPasswordActivity : AppCompatActivity() {
 
@@ -17,16 +18,31 @@ class LupaPasswordActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonReset.setOnClickListener {
-            val email = binding.editTextEmail.text.toString().trim()
-            if (isValidEmail(email)) {
-                Toast.makeText(this, "Link reset dikirim ke $email", Toast.LENGTH_SHORT).show()
-                // Optionally, navigate back to Login
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out) // Transisi animasi
-                finish()
-            } else {
-                binding.editTextEmail.error = "Format email tidak valid"
+            val email: String = binding.editTextEmail.text.toString().trim()
+
+            if (email.isEmpty()){
+                binding.editTextEmail.error= "Input Username"
+                binding.editTextEmail.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                binding.editTextEmail.error= "Invalid Username"
+                binding.editTextEmail.requestFocus()
+                return@setOnClickListener
+            }
+
+            FirebaseAuth.getInstance().sendPasswordResetEmail(email).addOnCompleteListener{
+                if (it.isSuccessful) {
+                    Toast.makeText(this, "Cek Email Form Reset Password", Toast.LENGTH_SHORT).show()
+                    Intent(this, LoginActivity::class.java).also {
+                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(it)
+                    }
+                }
+                else {
+                    Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -34,9 +50,5 @@ class LupaPasswordActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-    }
-
-    private fun isValidEmail(email: String): Boolean {
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }

@@ -33,6 +33,7 @@
         <!-- Menampilkan teks di dalam input -->
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -57,6 +58,7 @@
         <!-- Menampilkan teks di dalam input -->
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

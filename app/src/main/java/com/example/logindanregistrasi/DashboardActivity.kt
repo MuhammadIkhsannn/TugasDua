@@ -12,9 +12,6 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         var binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.buttonLogout.setOnClickListener {
-            finish()
         }
 
     }
-}

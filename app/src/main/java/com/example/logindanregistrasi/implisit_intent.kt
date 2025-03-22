@@ -13,7 +13,7 @@ import com.example.logindanregistrasi.R
 class ImplisitIntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_implisit_intent)
+        setContentView(R.layout.activity_implicite_intent)
 
         val etText = findViewById<EditText>(R.id.etText)
         val etPhone = findViewById<EditText>(R.id.etPhone)

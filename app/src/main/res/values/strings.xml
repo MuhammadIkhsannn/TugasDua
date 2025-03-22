@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">LoginDanRegistrasi</string>
-        <string name="input_text">Input text</string>
-        <string name="share_to">SHARE TO</string>
-        <string name="input_phone">Input phone number</string>
-        <string name="call">CALL</string>
-        <string name="input_location">Input location</string>
-        <string name="open_map">OPEN GOOGLE MAP</string>
-        <string name="input_website">Input Website URL</string>
-        <string name="open_website">OPEN WEBSITE</string>
-        <string name="open_camera">OPEN CAMERA</string>
-        <string name="open_gallery">OPEN GALLERY</string>
-        <string name="open_alarm">OPEN ALARM</string>
+    <string name="input_text">Input text</string>
+    <string name="share_to">SHARE TO</string>
+    <string name="input_phone">Input phone number</string>
+    <string name="call">CALL</string>
+    <string name="input_location">Input location</string>
+    <string name="open_map">OPEN GOOGLE MAP</string>
+    <string name="input_website">Input Website URL</string>
+    <string name="open_website">OPEN WEBSITE</string>
+    <string name="open_camera">OPEN CAMERA</string>
+    <string name="open_gallery">OPEN GALLERY</string>
+    <string name="open_alarm">OPEN ALARM</string>
 
 </resources>
