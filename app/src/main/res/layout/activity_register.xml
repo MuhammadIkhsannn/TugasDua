@@ -17,20 +17,22 @@
         android:layout_marginTop="145dp"
         android:text="REGISTER"
         android:textColor="@color/grey"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputUsername"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="110dp"
+        android:hint="Username"
         app:boxStrokeColor="#FF5722"
         app:boxStrokeWidthFocused="4dp"
-        app:hintTextColor="#FF5722"
-        app:startIconDrawable="@drawable/baseline_person_24"
-        app:startIconTint="@color/teal_700">
+        app:hintTextColor="#FF5722">
 
         <!-- Menampilkan teks di dalam input -->
 
@@ -38,13 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Username" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:textColor="#FF5722"/>
 
-    <!--  password  -->
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputPassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
@@ -53,24 +55,19 @@
         app:boxStrokeColor="#FF5722"
         app:boxStrokeWidthFocused="4dp"
         app:hintTextColor="#FF5722"
-        app:startIconDrawable="@drawable/baseline_security_24"
-        app:startIconTint="@color/teal_700"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/red">
 
-        <!-- Menampilkan teks di dalam input -->
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:textColor="#FF5722"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-
-    <!-- Untuk konfirmasi password         -->
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputRePassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
@@ -79,29 +76,38 @@
         app:boxStrokeColor="#FF5722"
         app:boxStrokeWidthFocused="4dp"
         app:hintTextColor="#FF5722"
-        app:startIconDrawable="@drawable/baseline_https_24"
-        app:startIconTint="@color/teal_700"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/red">
-
-        <!-- Menampilkan teks di dalam input -->
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:textColor="#FF5722"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/buttonregister"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="55dp"
         android:text="REGISTER"
-        android:background="@drawable/button"
+        android:backgroundTint="#FF5722"
         android:textColor="@color/white"
         android:textSize="19sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textloginsekarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="Sudah Punya Akun ? Login sekarang"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
         android:textStyle="bold"/>
 
 </LinearLayout>

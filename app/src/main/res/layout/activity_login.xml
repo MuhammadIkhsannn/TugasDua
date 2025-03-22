@@ -25,11 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="110dp"
+        android:hint="Username"
         app:boxStrokeColor="#FF5722"
         app:boxStrokeWidthFocused="4dp"
-        app:hintTextColor="#FF5722"
-        app:startIconDrawable="@drawable/baseline_person_24"
-        app:startIconTint="@color/teal_700">
+        app:hintTextColor="#FF5722">
 
         <!-- Menampilkan teks di dalam input -->
 
@@ -37,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Username" />
+            android:textColor="#FF5722"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--  password  -->
@@ -52,8 +51,6 @@
         app:boxStrokeColor="#FF5722"
         app:boxStrokeWidthFocused="4dp"
         app:hintTextColor="#FF5722"
-        app:startIconDrawable="@drawable/baseline_security_24"
-        app:startIconTint="@color/teal_700"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/red">
 
@@ -63,10 +60,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:textColor="#FF5722"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/textLupaPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -79,17 +77,19 @@
 
 
         <Button
+            android:id="@+id/buttonlogin"
             android:layout_width="180dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="55dp"
             android:text="LOGIN"
-            android:background="@drawable/button"
+            android:backgroundTint="#FF5722"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="19sp"/>
 
     <TextView
+        android:id="@+id/textBuatAkun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

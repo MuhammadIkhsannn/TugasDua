@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Input Text -->
+    <EditText
+        android:id="@+id/etText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/input_text"
+        android:layout_marginBottom="10dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SHARE TO"
+        android:layout_below="@id/etText"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Input Phone -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnShare"
+        android:layout_marginBottom="10dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/input_phone"
+        android:inputType="phone"
+        android:autofillHints="phoneNumber" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALL"
+        android:layout_below="@id/etPhone"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Input Location -->
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCall"
+        android:layout_marginBottom="10dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/input_location"
+        android:inputType="text"
+        android:autofillHints="postalAddress" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPEN GOOGLE MAP"
+        android:layout_below="@id/etLocation"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Input Website -->
+    <EditText
+        android:id="@+id/etWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMap"
+        android:layout_marginBottom="10dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/input_website"
+        android:inputType="textUri"
+        android:autofillHints="username" />
+
+
+    <Button
+        android:id="@+id/btnWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPEN WEBSITE"
+        android:layout_below="@id/etWebsite"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPEN CAMERA"
+        android:layout_below="@id/btnWebsite"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPEN GALLERY"
+        android:layout_below="@id/btnCamera"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPEN ALARM"
+        android:layout_below="@id/btnGallery"/>
+
+</RelativeLayout>
