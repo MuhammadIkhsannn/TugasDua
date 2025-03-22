@@ -1,3 +1,4 @@
+package com.example.logindanregistrasi
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -9,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.logindanregistrasi.R
 
-class MainActivity : AppCompatActivity() {
+class ImplisitIntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_implisit_intent)
