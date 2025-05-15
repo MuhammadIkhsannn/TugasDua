@@ -14,7 +14,7 @@ class MyAdapter(private val namaList: ArrayList<ItemData>) :
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val gambar: ImageView = itemView.findViewById(R.id.imageView2)
         val nama: TextView = itemView.findViewById(R.id.menu)
-        val harga: TextView = itemView.findViewById(R.id.harga)
+        val harga: TextView = itemView.findViewById(R.id.desc)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -29,8 +29,8 @@ class MyAdapter(private val namaList: ArrayList<ItemData>) :
         val currentItem = namaList[position]
 
         holder.gambar.setImageResource(currentItem.gambar)
-        holder.nama.text = currentItem.nama
-        holder.harga.text = currentItem.harga
+        holder.nama.text = currentItem.title
+        holder.harga.text = currentItem.desc
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)

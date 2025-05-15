@@ -5,8 +5,8 @@ import android.os.Parcelable
 
 class ItemData(
     val gambar: Int,
-    val nama: String,
-    val harga: String
+    val title: String,
+    val desc: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -16,8 +16,8 @@ class ItemData(
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(gambar)
-        parcel.writeString(nama)
-        parcel.writeString(harga)
+        parcel.writeString(title)
+        parcel.writeString(desc)
     }
 
     override fun describeContents(): Int = 0

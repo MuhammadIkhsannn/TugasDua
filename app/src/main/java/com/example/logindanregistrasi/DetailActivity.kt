@@ -21,7 +21,7 @@ class DetailActivity : AppCompatActivity() {
 
                     ItemData?.let {
                         image.setImageResource(it.gambar)
-                        title.text = it.menu
+                        title.text = it.title
                         Desc.text = it.desc
                     }
                 }
