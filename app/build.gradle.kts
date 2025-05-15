@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "com.example.logindanregistrasi"
     compileSdk = 35
+
     defaultConfig {
         applicationId = "com.example.logindanregistrasi"
         minSdk = 24
@@ -15,6 +16,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -24,13 +26,16 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         viewBinding = true
     }

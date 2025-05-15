@@ -13,6 +13,7 @@
         android:theme="@style/Theme.LoginDanRegistrasi"
         tools:targetApi="31">
 
+        <!-- Launcher Activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -22,42 +23,16 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity lain -->
-        <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".ImpliciteIntentActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".LupaPasswordActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".MenuMakananActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".DashboardActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".ProfilActivity"
-            android:exported="true" />/>
-
-        <activity
-            android:name=".Activity_About"
-            android:exported="true" />/>
+        <!-- Other Activities -->
+        <activity android:name=".MenuMakananActivity" android:exported="false" />
+        <activity android:name=".LupaPasswordActivity" android:exported="true" />
+        <activity android:name=".DetailActivity" android:exported="false" />
+        <activity android:name=".ImpliciteIntentActivity" android:exported="false" />
+        <activity android:name=".DashboardActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".RegisterActivity" android:exported="true" />
+        <activity android:name=".ProfilActivity" android:exported="true" />
+        <activity android:name=".Activity_About" android:exported="true" />
 
     </application>
 

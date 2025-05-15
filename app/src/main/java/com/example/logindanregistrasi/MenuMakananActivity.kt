@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.activity.enableEdgeToEdge
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,19 +16,18 @@ class MenuMakananActivity : AppCompatActivity() {
     private lateinit var menuAdapter: MyAdapter
     private lateinit var listMenu: ArrayList<ItemData>
 
-//    data untuk ditampilkan di recyclerview di dalam method onCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_menu_makanan)
-
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // RecyclerView
         menuRecyclerView = findViewById(R.id.menuRecyclerView)
         listMenu = ArrayList()
 
+        // Isi data menu makanan lengkap dengan deskripsi (pilihan dari HEAD)
         listMenu.add(ItemData(R.drawable.nasigoreng, "Nasi Goreng", "Nasi Goreng adalah ikon kuliner Indonesia yang telah mendunia. Nasi yang digoreng bersama bumbu dasar seperti bawang merah, bawang putih, cabai, dan kecap manis ini menghasilkan hidangan yang aromatik dan menggugah selera. Nasi goreng biasanya ditambahkan telur, potongan daging ayam atau sosis, dan disajikan dengan pelengkap seperti kerupuk, acar timun-wortel, serta irisan mentimun dan tomat. Satu porsi nasi goreng bisa jadi menu makan malam favorit karena praktis, lezat, dan mengenyangkan."))
         listMenu.add(ItemData(R.drawable.nasikuning, "Nasi Kuning", "Nasi Kuning adalah simbol kebahagiaan dan perayaan dalam budaya Indonesia. Nasi ini dimasak menggunakan santan dan kunyit yang memberi warna kuning cerah dan aroma harum. Biasanya disajikan dengan beragam lauk seperti abon sapi, telur dadar iris, bihun goreng, kacang tanah goreng, dan sambal. Rasanya gurih dan sedikit manis, sangat cocok disajikan pada acara-acara spesial atau sebagai menu sarapan yang bergizi."))
         listMenu.add(ItemData(R.drawable.sotoayam, "Soto Ayam", "Soto Ayam adalah sup khas Indonesia dengan kuah bening kekuningan dari kunyit. Di dalamnya terdapat suwiran ayam, soun, kol, irisan telur rebus, dan kadang-kadang kentang goreng atau emping. Rasanya ringan namun kaya akan aroma rempah. Disajikan panas-panas dengan sambal, perasan jeruk nipis, dan taburan bawang goreng, soto ayam adalah pilihan terbaik untuk sarapan, makan siang, maupun saat cuaca dingin."))
@@ -38,20 +39,19 @@ class MenuMakananActivity : AppCompatActivity() {
         listMenu.add(ItemData(R.drawable.ikanbakar, "Ikan Bakar", "Ikan Bakar adalah sajian laut yang digemari di berbagai daerah Indonesia. Ikan segar, seperti nila atau gurame, dibumbui dengan campuran bawang merah, bawang putih, kunyit, cabai, dan kecap manis lalu dibakar di atas arang hingga matang sempurna. Hasilnya adalah ikan dengan tekstur lembut, kulit garing, dan rasa bumbu yang meresap. Biasanya disajikan dengan sambal terasi dan lalapan segar, menjadikannya hidangan yang nikmat dan sehat."))
         listMenu.add(ItemData(R.drawable.nasipadang, "Nasi Padang", "Nasi Padang adalah bentuk sempurna dari hidangan Minangkabau yang kaya akan cita rasa. Disajikan dengan nasi putih dan aneka lauk seperti rendang daging, ayam pop, gulai ayam, perkedel kentang, sambal ijo, dan daun singkong rebus. Masing-masing lauk memiliki rasa yang khas, dari gurih, pedas, hingga creamy. Nasi Padang terkenal dengan teknik penyajiannya yang “dimarakkan” (disajikan semua lauk di meja), menawarkan pengalaman makan yang mewah dan otentik."))
 
-        // definisikan RecyclerView bersama Adapter dan layout manager
-        menuRecyclerView.layoutManager = LinearLayoutManager(this)
+        menuRecyclerView.layoutManager = GridLayoutManager(this, 2)
         menuRecyclerView.setHasFixedSize(true)
         menuAdapter = MyAdapter(listMenu)
         menuRecyclerView.adapter = menuAdapter
     }
 
-    // action bar
+    // action bar menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
-    // menu item selection
+    // handle menu item click
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.profile -> {
