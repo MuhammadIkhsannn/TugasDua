@@ -7,11 +7,12 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 
 class MenuMakananActivity : AppCompatActivity() {
+    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var menuRecyclerView: RecyclerView
     private lateinit var menuAdapter: MyAdapter
     private lateinit var listMenu: ArrayList<ItemData>
@@ -51,7 +52,7 @@ class MenuMakananActivity : AppCompatActivity() {
         return true
     }
 
-    // handle menu item click
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.profile -> {
@@ -59,7 +60,10 @@ class MenuMakananActivity : AppCompatActivity() {
                 true
             }
             R.id.logout -> {
-                startActivity(Intent(this, LoginActivity::class.java))
+                firebaseAuth.signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
                 finish()
                 true
             }
