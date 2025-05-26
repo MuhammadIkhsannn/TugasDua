@@ -85,7 +85,7 @@
         android:textStyle="bold"
         android:textSize="19sp"/>
 
-    <!-- Divider / Atau -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

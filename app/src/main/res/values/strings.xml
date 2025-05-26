@@ -11,6 +11,7 @@
     <string name="open_camera">OPEN CAMERA</string>
     <string name="open_gallery">OPEN GALLERY</string>
     <string name="open_alarm">OPEN ALARM</string>
+
     <string name="default_web_client_id">245070162801-40apnur58quqndkl1bsim4t3lur6nvri.apps.googleusercontent.com</string>
 
     <!-- Tambahan untuk Firebase Google Sign-In -->

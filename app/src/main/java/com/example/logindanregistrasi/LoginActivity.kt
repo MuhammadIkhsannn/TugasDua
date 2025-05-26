@@ -67,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
             loginUser(email, password)
         }
 
+
         // Tombol login dengan Google
         binding.btngoogle.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
