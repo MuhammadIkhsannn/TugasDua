@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
 
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation(platform("com.google.firebase:firebase-bom:32.1.1"))
     implementation("com.google.firebase:firebase-auth-ktx")
 
